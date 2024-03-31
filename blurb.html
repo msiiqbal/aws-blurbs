@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoieb Bulurbs</title>
+  <link rel="icon" type="image/x-icon" href="color.png">
+  <style>
+    html{
+      padding: 10px;
+    }
+    pre {
+      background-color: rgb(247, 244, 244);
+      padding: 20px;
+      text-wrap: wrap;
+      line-height: 160%;
+    }
+
+    .copy {
+      position: absolute;
+      right: 20px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+
+    <!-- Cw agent -->
+    <div class="block">
+      <h1>CW Agent</h1>
+      <pre>
+Troubleshooting the CloudWatch agent - CloudWatch agent files and locations - <a href =" https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/troubleshooting-CloudWatch-Agent.html#CloudWatch-Agent-files-and-locations" target="_blank">here</a>
+
+
+<b>a) config.json file  - Agent configuration file. </b>
+Linux : /opt/aws/amazon-cloudwatch-agent/bin/config.json
+Windows : & $Env:ProgramFiles\Amazon\AmazonCloudWatchAgent\config.json
+
+<b>b) amazon-cloudwatch-agent.log file - The Log file the agent writes to.</b>
+Linux : /opt/aws/amazon-cloudwatch-agent/logs/amazon-cloudwatch-agent.log
+Windows : & $Env:ProgramData\Amazon\AmazonCloudWatchAgent\Logs\amazon-cloudwatch-agent.log
+
+<b>c) configuration-validation.log file - Agent configuration validation file.</b>
+Linux : /opt/aws/amazon-cloudwatch-agent/logs/configuration-validation.log
+Windows : & $Env:ProgramData\Amazon\AmazonCloudWatchAgent\Logs\configuration-validation.log
+
+<b>d) TOML Files.</b>
+  <b>i) amazon-cloudwatch-agent.toml : </b>
+  Linux : /opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.toml
+  Windows : & $Env:ProgramData\Amazon\AmazonCloudWatchAgent\amazon-cloudwatch-agent.toml
+
+  <b>ii) common-config.toml : </b>
+  Linux : /opt/aws/amazon-cloudwatch-agent/etc/common-config.toml
+  Windows : & $Env:ProgramData\Amazon\AmazonCloudWatchAgent\common-config.toml
+
+<b>e) file_config.json :</b>
+Linux : /opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.d/file_config.json
+Windows : C:\ProgramData\Amazon\AmazonCloudWatchAgent\Configs\file_config.json
+
+<b>f) YAML file which is conversion of json to YAML</b>
+Linux : /opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.yaml
+Windows : & $Env:ProgramData\Amazon\AmazonCloudWatchAgent\amazon-cloudwatch-agent.yaml
+
+<h3>Other commands </h3>
+<b>CW agent Configuration</b>
+1) Linux : sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard
+2) Windows : cd "C:\Program Files\Amazon\AmazonCloudWatchAgent" amazon-cloudwatch-agent-config-wizard.exe
+
+<b>CW Agent strat cmd</b>
+1) Linux :  sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:configuration-file-path -s 
+  example : sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json -s
+2) Windows : & $Env:ProgramFiles\Amazon\AmazonCloudWatchAgent\amazon-cloudwatch-agent-ctl.ps1 -a fetch-config -m ec2 -c file:configuration-file-path -s 
+  ---> & $Env:ProgramFiles\Amazon\AmazonCloudWatchAgent\amazon-cloudwatch-agent-ctl.ps1 -a fetch-config -m ec2 -c file:'C:\Program Files\Amazon\AmazonCloudWatchAgent\config.json' -s
+
+<b>CW Agent Stop Cmd</b>
+1) Linux : sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -m ec2 -a stop
+2) Windows : & $Env:ProgramFiles\Amazon\AmazonCloudWatchAgent\amazon-cloudwatch-agent-ctl.ps1 -m ec2 -a stop
+
+<b>CW Agent Status Check Cmd</b>
+1) Linux : sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -m ec2 -a status
+2) Windows : & $Env:ProgramFiles\Amazon\AmazonCloudWatchAgent\amazon-cloudwatch-agent-ctl.ps1 -m ec2 -a status
+
+<b>for enabling psi</b>
+ps> Set-ExecutionPolicy RemoteSigned 
+
+<b>CW Agent ssm file location</b>
+Linux : /opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.d/ssm_CW-agent-config
+          </pre>
+    </div>
+
+    <!-- Lc blurbs -->
+    <div class="block">
+      <h1 class="heading"> Meet link</h1>
+      <pre id="lc blurb">
+Unfortunately it has been quite some time since your last response. I will disconnect myself from this chat session but I will follow up on the case. If you have any outstanding questions or concerns, please feel free to reach out to us again.
+
+-----------
+
+Since I have not been able to hear from you since more than 15 minutes, I assume that you are no longer connected to this chat. Hence, I shall proceed to end this chat for now.
+
+In case you have any additional queries, please feel free to reply on this case with your query, or perhaps your available time slot, and I shall schedule a Chime Meeting to discuss the same further.
+
+I will also send you a summary of our discussion for your reference.
+
+You've an AWSome day ahead!
+            </pre>
+    </div>
+
+    <!-- SLA saver -->
+    <div class="block">
+      <h1 class="heading"> SLA Saver</h1>
+      <button class="copy" onclick="copy_clipboard('sla_saver')"> copy</button>
+      <pre id="sla_saver">Hello,
+
+Greetings for the day !  Hope you are doing well !
+
+Thank you for contacting us. My name is Shoieb and I got this case assigned to me and have already started working on it.
+
+May I request you to please allow me some time, which will help me to carry out initial level investigation. Once I have gathered some information on the status , I will get back to you at the earliest with details.
+
+Your patience is highly appreciated.
+
+I am changing this case status to "Pending Amazon Action" until I get back to you.
+
+In the meantime, please feel free to reach out to me if you need any further clarification or information. I will be happy to help you  !
+
+Thanks for your kind understanding & cooperation !
+            </pre>
+    </div>
+
+    <!-- ending lines -->
+    <div class="block">
+      <h1>Ending Lines</h1>
+      <pre>I hope you will find the above information helpful. Nonetheless, should you have any other queries/issues, please feel free to add them to your correspondence. I would be happy to assist you.
+
+I hope the information provided above addresses your query. Please feel free to reach out to me, in case you need further assistance or clarification. I would be happy to assist you.
+                
+In the meantime, please feel free to reach out to me if you have any further queries or concerns. I would be glad to assist you.
+                
+I hope this helps. If you still need additional help in any other query please feel free to get back to us and I will be happy to assist you further.
+                
+I hope our discussion was of value to you. Meanwhile, in case if you have any queries or concerns feel free to let me know and I will be more than happy to assist you.
+                
+I appreciate if you can get back to us with the above details so that I can continue with assisting you on this case accordingly. Please feel free to reach out to me, in case you need further assistance or clarification. I would be happy to assist you.
+                
+I eagerly await your response in this regard and look forward to engaging in more effective troubleshooting once I receive the information requested above. In case you have any queries or concerns regarding the queries asked above, please feel free to write back to me, it would be my pleasure to assist you further and ushering your issue towards resolution.
+                
+In the meanwhile, I'll be changing the status of this case to 'Pending Amazon Action' while we wait for a response from the internal team. This is to avoid the case from automatically resolving.
+
+Please be assured that I am here to help and my intentions will always be addressing your case in the best way possible, looking for your needs to be covered and accomplish your satisfaction.However, in case this information does not cover your concern or if you have any further questions please do not hesitate in reaching back to me over this case, I'll be happy to work until everything is resolved/addressed successfully.
+
+Having said that, I would like to inform you that CloudWatch is a push based service / CloudWatch is a service which only accepts metric; i.e. it only consumes information. CloudWatch plays no role in pushing the metrics (it does not pull metrics from the source AWS service) and it is the source AWS service (in this case Amazon ApiGateway) that is responsible to push the metrics to CloudWatch. Please feel free to reach out to the Amazon ApiGateway team via support case as they will be in a better position to assist you with queries related to Amazon ApiGateway metrics. I hope you understand.
+
+As CloudWatch is a push-based service, we do not have visibility at the source performing the logging on the respective log groups and we cannot limit how much logs you are pushing to CloudWatch using "PutLogEvents". To reduce the Log ingestion costs, I'll recommend you re-evaluate logging levels at the source that is ingesting the logs to CloudWatch and reduce / eliminate the ingestion of unnecessary logs according to your use-case.
+                
+In case I was able to address all your concerns, please let me know so that I could mark this case as "Resolved" on behalf of you for your kind convenience.
+                
+As discussed, you did mentioned you were happy with the outcome of the call and we could RESOLVE the case. That being said, I will be administratively resolving the case as the IT service has been fully restored and operational.
+
+--------
+I hope I was able to help clarify all your concerns regarding this case. Since you did not seem to have any further queries on our Live Chat earlier today, I shall go ahead and mark this case as "Resolved" as per your kind consent.
+Please feel free to reach out to us again if you come across any further concerns.
+
+It was indeed my pleasure to work with you on the case.
+Wishing you a wonderful day ahead!
+---------
+Awaiting your kind response. Wishing you an AWSome day ahead!
+
+----
+However, in case the issue still persists, or if you are unable to follow any of the steps provided, or if your use case is different, we could possibly try to troubleshoot this over a Chime Meeting with a screen sharing session to try and resolve this issue at the earliest. 
+Kindly let me know if you are able to provide a time slot for your availability from Monday to Friday, 7:30AM to 4:30PM UTC so that I could assist you over the screenshare on the Chime Meeting. 
+
+In case, no time slots are available between my aforementioned shift timings, you may also consider initiating a Live Chat/Call Support with us through your Amazon Case Console and the next available engineer should be able to assist you over the Chime session.
+
+Looking forward to your kind response. Wish you a wonderful day ahead!
+----
+            </pre>
+    </div>
+
+    <!-- SLA saver -->
+    <div class="block">
+      <h1 class="heading"> Other blurbs</h1>
+      <pre id="other_blurb">
+
+[Privacy Statement - Cross Account]
+Please note that AWS takes the privacy and security of your account very seriously. As a result, we can only offer support for resources of the account from which the support case is opened. Since this case is opened form this AWS account (), I do not have the visibility to view the resources of any other account.
+Hence I request you to please reach out to us from the relevant account and I will be able to check the respective account’s logs.
+        
+[Coding Support]
+Please understand while the AWS SDKs and example solutions are written by AWS, Premium Support focuses on best practices, usage and troubleshooting and does not include code development or debugging example applications. For more details on what is covered, please see our FAQs here:
+
+https://aws.amazon.com/premiumsupport/faqs/#issue-types
+            </pre>
+    </div>
+
+    <!-- Chat not connecting -->
+    <div class="block">
+      <h1 class="heading"> Chat not connected</h1>
+      <button class="copy" onclick="copy_clipboard('Unfortunately')"> copy</button>
+      <pre id="Unfortunately">Hello,
+
+Warm greeting from AWS Support Engineering!
+        
+I am Shoieb from CloudWatch team and I will be working with you on this case today.
+        
+Unfortunately, looks like we were unable to connect over chat to discuss your issue.
+        
+Please feel free to reply on this case with your detailed query and concerend resource ARN, or perhaps your available time slot, and I shall schedule a Chime Meeting to discuss the same further.
+        
+I would like to humbly mention that, my shift timings are from Monday to Friday, 1:00 PM IST to 8:00 pm IST.
+        
+In case my working time zone does not align with yours, please feel free to initiate a chat or call so that an available Engineer can go on a call/chat with you to understand this requirement and further usher this to a resolution.
+            </pre>
+    </div>
+
+    <!-- meet link share -->
+    <div class="block">
+      <h1 class="heading"> Meet link</h1>
+      <button class="copy" onclick="copy_clipboard('share_meet_link')"> copy</button>
+      <pre id="share_meet_link">Hello,
+
+Thanks for contacting AWS Support. My name is Shoieb and I am assisting you on this case.
+As per your request on the Live Chat, please find below the Chime Meeting details.
+        
+<<<<< Chime Meeting Details with URL >>>>>
+
+Looking forward to work with you.
+Good Day!
+
+-----------
+Hello ,
+
+Greetings from AWS Support Engineering ! Thank you for contacting us.
+
+<<<<< Chime Meeting Details with URL >>>>>
+
+I am waiting for you to join on the above Chime meeting bridge. The above Chime meeting bridge would closed be after 15 minutes of inactivity. In case you are unable to join the Chime meeting now, kindly share a convenient time (including time zone) that works for you and your contact details (with country code) for a quick discussion to assist you further. My work hours are 07:30 AM UTC to 4:30 PM UTC (Mon - Fri). Alternatively, please feel free to initiate a chat / call from your end at a time of your convenience and we would be happy to assist you accordingly.
+
+Looking forward to work with you.
+
+Thank you
+            </pre>
+    </div>
+
+
+
+  </div>
+</body>
+</html>
