@@ -245,8 +245,52 @@ Thank you
             </pre>
     </div>
 
+    <div class="block">
+      <h1 class="heading">CLI Commands</h1>
+      <pre id="cli_commands">
+[get-metric-statistics]
+aws cloudwatch get-metric-statistics --namespace AWS/ApplicationELB --metric-name HealthyHostCount --statistics Average  --period 300  --dimensions Name=TargetGroup,Value=targetgroup/HTTP/a25f1783800989bda0c8 Name=LoadBalancer,Value=app/shoieb/9fc05a84989f763fd5 --start-time 2024-03-25T11:58:00Z --end-time 2024-03-25T12:03:00Z
 
+[get-metric-data]-no file
+$ aws cloudwatch get-metric-data --cli-input-json '{"MetricDataQueries":[{"Id":"m1","MetricStat":{"Metric":{"Namespace":"AWS/EC2","MetricName":"CPUUtilization","Dimensions":[{"Name":"InstanceId","Value":"i-0c8f3e42c0773280c"}]},"Period":60,"Stat":"Maximum"}}],"StartTime":"2023-11-29T09:25:00Z","EndTime":"2023-11-29T09:45:00Z"}'
+
+[get-metric-data]-with file
+$ aws cloudwatch get-metric-data --metric-data-queries file://./gmd.json --start-time 2023-08-29T11:58:00Z --end-time 2023-08-31T14:03:00Z
+--------
+[
+    {
+      "Id": "request_for_cpu",
+      "MetricStat": {
+        "Metric": {
+          "Namespace": "AWS/EC2",
+          "MetricName": "CPUUtilization",
+          "Dimensions": [
+            {
+              "Name": "InstanceId",
+              "Value": "i-0041a4d4442e2ee27"
+            }
+          ]
+        },
+        "Period": 300,
+        "Stat": "Average",
+        "Unit": "Percent"
+      }
+    }
+]
+--------
+[put-rule]
+$ aws events put-rule --name "nht-shoieb-16082002-rule" --event-pattern "{\"source\":[\"aws.ec2\"],\"detail-type\":[\"EC2 Instance State-change Notification\"],\"detail\":{\"state\":[\"stopped\",\"terminated\"]}}"
+
+[put-log-events]
+$ aws logs put-log-events --log-group-name shoiebim_a-3993fa0 --log-stream-name i-0cd5ee34a73d0806d --log-events '[  {"timestamp": 1693316496102,"message": "First: Lab Completed"},{"timestamp": 1693316509464,"message": "Second: Lab Completed"}]'
+
+remote server to mac download
+$ scp -i authenticate.pem ec2-user@54.174.36.10:/home/ec2-user/pc.pcap /Users/shoiebim/Downloads
+      </pre>
+    </div>
 
   </div>
+
+
 </body>
 </html>
