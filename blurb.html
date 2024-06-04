@@ -287,6 +287,9 @@ $ aws logs put-log-events --log-group-name shoiebim_a-3993fa0 --log-stream-name 
 [put-metric-data]
 $ aws cloudwatch put-metric-data --metric-name DummyTestMetric --namespace MyDummyTestMetricNameSpace --unit Bytes --value 231434333 --dimensions Env=DummyTest
 
+[set-alarm-state]
+$ aws cloudwatch set-alarm-state --alarm-name "sev2" --state-value ALARM --state-reason "testing purposes"
+        
 remote server to mac download
 $ scp -i authenticate.pem ec2-user@54.174.36.10:/home/ec2-user/pc.pcap "path"
 
