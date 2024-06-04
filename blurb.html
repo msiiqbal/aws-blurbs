@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shoieb Bulurbs</title>
+  <title>Shoieb Blurbs</title>
   <link rel="icon" type="image/x-icon" href="color.png">
   <style>
     html{
@@ -284,13 +284,19 @@ $ aws events put-rule --name "nht-shoieb-16082002-rule" --event-pattern "{\"sour
 [put-log-events]
 $ aws logs put-log-events --log-group-name shoiebim_a-3993fa0 --log-stream-name i-0cd5ee34a73d0806d --log-events '[  {"timestamp": 1693316496102,"message": "First: Lab Completed"},{"timestamp": 1693316509464,"message": "Second: Lab Completed"}]'
 
+[put-metric-data]
+$ aws cloudwatch put-metric-data --metric-name DummyTestMetric --namespace MyDummyTestMetricNameSpace --unit Bytes --value 231434333 --dimensions Env=DummyTest
+
 remote server to mac download
-$ scp -i authenticate.pem ec2-user@54.174.36.10:/home/ec2-user/pc.pcap /Users/shoiebim/Downloads
+$ scp -i authenticate.pem ec2-user@54.174.36.10:/home/ec2-user/pc.pcap "path"
+
       </pre>
     </div>
 
   </div>
 
-
 </body>
+<script src="test1.js" ></script>
+<script>
+</script>
 </html>
