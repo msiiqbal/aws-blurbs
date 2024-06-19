@@ -193,7 +193,9 @@ Hence I request you to please reach out to us from the relevant account and I wi
 Please understand while the AWS SDKs and example solutions are written by AWS, Premium Support focuses on best practices, usage and troubleshooting and does not include code development or debugging example applications. For more details on what is covered, please see our FAQs here:
 
 https://aws.amazon.com/premiumsupport/faqs/#issue-types
-        or
+
+  (or)
+
 Please note that writing/debugging/modifying/testing the custom code/script for your use-case would require expertise from your end as code support is out of AWS support scope and any assistance on it is on best effort basis only. For more details on what is covered, please see our FAQs here: AWS Support FAQs - https://aws.amazon.com/premiumsupport/faqs/#issue-types
             </pre>
     </div>
@@ -215,6 +217,25 @@ Please feel free to reply on this case with your detailed query and concerend re
 I would like to humbly mention that, my shift timings are from Monday to Friday, 1:00 PM IST to 8:00 pm IST.
         
 In case my working time zone does not align with yours, please feel free to initiate a chat or call so that an available Engineer can go on a call/chat with you to understand this requirement and further usher this to a resolution.
+            </pre>
+    </div>
+
+    <div class="block">
+      <h1 class="heading"> Prewarm request questions</h1>
+      <button class="copy" onclick="copy_clipboard('prewarmQuestions')"> copy</button>
+      <pre id="prewarmQuestions">
+1. ELB DNS name:
+2. Event start date/time:
+3. Event end date/time:
+4. Expected requests per second (or expected concurrent connections for TCP listeners):
+5. Expected rate of traffic increase:
+6. Average amount of data passing through the ELB per request/response pair (In Bytes):
+7. Expected percentage of traffic using SSL termination on the ELB:
+8. Number of AZ's that will be used for this load balancer:
+9. Are HTTP keepalives (persistent connections) used on the backends/targets:
+10. Are the backends/targets currently scaled to the level they will be during the event:
+11. A description of the traffic pattern you are expecting:
+12. A brief description of your use case:
             </pre>
     </div>
 
@@ -289,9 +310,6 @@ $ aws logs put-log-events --log-group-name shoiebim_a-3993fa0 --log-stream-name 
 [put-metric-data]
 $ aws cloudwatch put-metric-data --metric-name DummyTestMetric --namespace MyDummyTestMetricNameSpace --unit Bytes --value 231434333 --dimensions Env=DummyTest
 
-[set-alarm-state]
-$ aws cloudwatch set-alarm-state --alarm-name "sev2" --state-value ALARM --state-reason "testing purposes"
-        
 remote server to mac download
 $ scp -i authenticate.pem ec2-user@54.174.36.10:/home/ec2-user/pc.pcap "path"
 
@@ -301,7 +319,7 @@ $ scp -i authenticate.pem ec2-user@54.174.36.10:/home/ec2-user/pc.pcap "path"
   </div>
 
 </body>
-<script src="test1.js" ></script>
+<script src="clipboard.js" ></script>
 <script>
 </script>
 </html>
